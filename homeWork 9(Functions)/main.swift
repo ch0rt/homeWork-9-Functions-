@@ -175,6 +175,28 @@ let numF:Float = 4.2
 let resmultiplyFloates = multiplyFloates(numE: numE, numF: numF)
 print(resmultiplyFloates)
 
+//Home Work 9_4
+//հայտարարել ֆունկցիա որը կհաշվի և կվերադրձնի 2 Int թվերի քանորդը։
+//հայտարարել ֆունկցիա որը կհաշվի և կվերադրձնի 2 Double թվերի քանորդը։
+//հայտարարել ֆունկցիա որը կհաշվի և կվերադրձնի 2 Float թվերի քանորդը։
+
+func bajanum(number:Int, number1:Int) -> Int {
+    return number / number1
+}
+let resultBajanum = bajanum(number: 4, number1: 2)
+print(resultBajanum)
+//
+
+let number = 4.2
+let number1 = 2.1
+let resNumbersBajanum = bajanum(number: 4, number1: 2)
+print(resNumbersBajanum)
+//
+
+func bajanmanFunkciaFloat(numb1:Float, numb2: Float) {
+    print(numb1 / numb2)
+}
+bajanmanFunkciaFloat(numb1: 4.2, numb2: 2.1)
 
 
 //Home Work 9_5
@@ -201,6 +223,7 @@ sqrtNum(num: 5)
 //Home Work 9_6
 //հայտարարել ֆունկցիա որը որպես արգումենտ ունի [String] մասիվ և կվերադաձնի String որի տեքստային արժեքը կլինի այդ մասիվում գտնվող էլեմենտները ըստ մասիվում դասակարգված հաճորտականությամբ և կառանձնանան միմյանցից & սինվոլով։
 //օրինակ եթե ֆունկցիան ընդունի հետևյալ  [“Hello”, “GITC”, “IOS”] մասիվը որպես արգումենտ ապա պետք է վերադաձնի “Hello&GITC&IOS”
+
 
 // example 1
 
@@ -229,10 +252,34 @@ func arrStr2(arr: [String]) -> String {
 }
 let symbol = arrStr2(arr: ["Hello" , "GITC" , "IOS"])
 print(symbol)
+//
+
+// example3
+
+var myArr = ["HELLO", "GITC", "IOS"]
+func getAdditionOfElementsArray (array : [String]) -> String? {
+    
+  if array.isEmpty { return nil }
+  var sum: String = ""
+    
+  for item in array {
+    sum += item
+    if item == array[array.endIndex - 1] {
+      break
+    }
+    sum += "&"
+  }
+  return sum
+}
+if let additionOfElement = getAdditionOfElementsArray(array: myArr) {
+  print(additionOfElement)
+} else {
+  print("array is empty")
+}
 
 
 
-//Home Work 9_7
+////Home Work 9_7
 //հայտարարել ֆունկցիա որը կընդունի Int թիվ և կվերադաձնի այդ թվի ֆակտորյալը։
 
 func numFactorial(num:Int) -> Int {
