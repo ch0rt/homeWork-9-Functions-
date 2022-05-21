@@ -299,14 +299,5 @@ hypotenuse(page: 5, page1: 5)
 
 
 
-let g:Int = 5
-let k:Int = 10
-func gkx()->Int {
-  let x = ((k * k) + (g * g))/((k * k) + (g * g))
-  return x
-}
-  print(gkx())
-
-
 
 
