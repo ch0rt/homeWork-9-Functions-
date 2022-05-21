@@ -24,12 +24,7 @@ let a1 = 12
 let b1 = 6
 let resSum = sumTwoInts(a: a1, b: b1)
 print(resSum)
-//
 
-func sumInts(A:Int, B:Int) {
-    print(A + B)
-}
-sumInts(A: 12, B: 6)
 
 
 //հայտարարել ֆունկցիա որը կհաշվի և կվերադրձնի 2 Double թվերի գումարը։
@@ -45,12 +40,7 @@ let c1:Double = 12.5
 let d1:Double = 3.6
 let resultsumDouble = sumTwoDoubles(c: c1, d: d1)
 print(resultsumDouble)
-//
 
-func sumtwoDoubl(c:Double, d:Double) {
-    print(c + d)
-}
-sumtwoDoubl(c: 12.5, d: 3.6)
 
 
 //հայտարարել ֆունկցիա որը կհաշվի և կվերադրձնի 2 Float թվերի գումարը։
@@ -66,12 +56,8 @@ let e1:Float = 3.44
 let f1:Float = 2.12
 let resulttwoFloat = sumTwoFloats(e: e1, f: f1)
 print(resulttwoFloat)
-//
 
-func sumFloate(e:Float, f:Float) {
-    print(e + f)
-}
-sumFloate(e: 2.12, f: 3.44)
+
 
 //Home Work 9_2
 
@@ -89,13 +75,6 @@ let q1 = 10
 let w1 = 5
 let resDifInts = differenceTwoInts(q: q1, w: w1)
 print(resDifInts)
-//
-
-func difInts (q:Int, w:Int) {
-    print(q - w)
-}
-difInts(q: 10, w: 5)
-
 
 
 //հայտարարել ֆունկցիա որը կհաշվի և կվերադրձնի 2 Double թվերի տարբերությունը։
@@ -191,16 +170,12 @@ let number = 4.2
 let number1 = 2.1
 let resNumbersBajanum = bajanum(number: 4, number1: 2)
 print(resNumbersBajanum)
-//
 
-func bajanmanFunkciaFloat(numb1:Float, numb2: Float) {
-    print(numb1 / numb2)
-}
-bajanmanFunkciaFloat(numb1: 4.2, numb2: 2.1)
 
 
 //Home Work 9_5
 //հայտարարել ֆունկցիա որը կվերադաձնի Int թվերի քառակուսին։
+
 
 func sqrtInt (num:Int) -> Int {
     return num * num
@@ -227,7 +202,8 @@ sqrtNum(num: 5)
 
 // example 1
 
-func arrStr(arr: [String]) -> String {
+func arrStr(arr: [String]) -> String  {
+    
 var a = ""
   var b = 0
   while b < arr.count {
@@ -258,10 +234,10 @@ print(symbol)
 
 var myArr = ["HELLO", "GITC", "IOS"]
 func getAdditionOfElementsArray (array : [String]) -> String? {
-    
+
   if array.isEmpty { return nil }
   var sum: String = ""
-    
+
   for item in array {
     sum += item
     if item == array[array.endIndex - 1] {
@@ -319,5 +295,18 @@ func hypotenuse(page:Int, page1:Int) {
     print(sqrt(Double(hypo)))
 }
 hypotenuse(page: 5, page1: 5)
+
+
+
+
+let g:Int = 5
+let k:Int = 10
+func gkx()->Int {
+  let x = ((k * k) + (g * g))/((k * k) + (g * g))
+  return x
+}
+  print(gkx())
+
+
 
 
